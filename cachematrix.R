@@ -45,11 +45,15 @@ cacheSolve <- function(x, ...) {
             return(inv)
       }
       
-      #compute inverse using returned functions
+      #get matrix 'x'
       data <- x$get()
+     
+      #solve inverse of 'x'
       inv <- solve(data)
       
-      #set and return inverse of 'x'
+      #set inverse
       x$setInverse(inv)
+      
+      #return inverse
       inv
 }      
